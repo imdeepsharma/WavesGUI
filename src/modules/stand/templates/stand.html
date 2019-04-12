@@ -12,56 +12,65 @@
 
             <h1>Buttons</h1>
 
-            <w-button class="interface btn-send" on-click="$ctrl.showSend()">
-                <svg width="15px" height="14px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path
-                        d="M15.7261538,5.95734828 L15.7261538,5.95734828 C15.9214159,6.15261042 15.9214159,6.46919291 15.7261538,6.66445506 L8.50013244,13.8904765 L1.3118034,6.70753193 C1.1164681,6.51234296 1.11634949,6.19576049 1.31153846,6.0004252 L1.31153846,6.0004252 C1.50672743,5.80508991 1.8233099,5.8049713 2.01864519,6.00016027 L8.49986756,12.4765278 L15.019047,5.95734828 C15.2143092,5.76208613 15.5308917,5.76208613 15.7261538,5.95734828 Z"
-                        id="Shape-Copy-2"
-                        transform="translate(8.518912, 9.747136) scale(-1, 1) rotate(-180.000000) translate(-8.518912, -9.747136) "></path>
-                    <path
-                        d="M8.49986756,7.47652778 L15.019047,0.957348251 C15.2143092,0.762086104 15.5308917,0.762086102 15.7261538,0.957348247 L15.7261538,0.957348247 C15.9214159,1.15261039 15.9214159,1.46919288 15.7261538,1.66445503 L8.50013244,8.89047647 L1.31180339,1.70753191 C1.1164681,1.51234293 1.11634949,1.19576047 1.31153846,1.00042518 L1.31153846,1.00042518 C1.50672744,0.805089886 1.8233099,0.804971272 2.01864519,1.00016024 L8.49986756,7.47652778 Z"
-                        id="Shape-Copy-3"
-                        transform="translate(8.518912, 4.747136) scale(-1, 1) rotate(-180.000000) translate(-8.518912, -4.747136) "></path>
-                </svg>
-                <span class="btn-icon">Send</span>
+            <w-button  class="button-icon button-medium">
+                <i class="button-img button-img-send"></i>
             </w-button>
 
             <div class="margin-2"></div>
 
-            <w-button class="small submit">
-                <span class="button">Small</span>
+            <w-button  class="button-with-icon button-medium" on-click="$ctrl.showSend()">
+                <i class="button-img button-img-send"></i>
+                <span class="button-text">Send</span>
             </w-button>
 
             <div class="margin-2"></div>
 
-            <w-button class="tiny submit">
-                <span class="button">Tiny</span>
-            </w-button>
-
-            <div class="margin-2"></div>
-            <w-button class="medium submit">
-                <span class="button">Medium</span>
-            </w-button>
-
-                                        <!-- add candy effect-->
-
-            <div class="margin-2"></div>
-
-            <w-button class="big long submit">
-                <span class="button">Big button</span>
+            <w-button class="button-micro button-bordered">
+                <span class="button-text">Microl</span>
             </w-button>
 
             <div class="margin-2"></div>
 
-            <w-button class="big long warning">
-                <span class="button">Big warning</span>
+            <w-button class="button-potty button-submit">
+                <span class="button-text">Potty</span>
             </w-button>
 
             <div class="margin-2"></div>
 
-            <w-button class="big long bordered">
-                <span class="button">bordered</span>
+            <w-button class="button-small button-submit">
+                <span class="button-text">Small</span>
+            </w-button>
+
+            <div class="margin-2"></div>
+
+            <w-button class="button-small button-no-bordered">
+                <span class="button-text">Small</span>
+            </w-button>
+
+            <div class="margin-2"></div>
+
+            <w-button class="button-medium button-submit">
+                <span class="button-text">Medium</span>
+            </w-button>
+
+            <!-- add candy effect-->
+
+            <div class="margin-2"></div>
+
+            <w-button class="button-large button-long button-submit">
+                <span class="button-text">Big button</span>
+            </w-button>
+
+            <div class="margin-2"></div>
+
+            <w-button class="button-large button-long button-warning">
+                <span class="button-text">Big warning</span>
+            </w-button>
+
+            <div class="margin-2"></div>
+
+            <w-button class="button-large button-long button-bordered">
+                <span class="button-text">bordered</span>
             </w-button>
 
             <div class="margin-2"></div>
@@ -164,6 +173,8 @@
                      name="textarea"
                      ng-model="$ctrl.tx.attachment"
                      class="normal"></w-input> <!-- .normal /.tall / .large / .medium -->
+
+            <div class="margin-2"></div>
 
             <div class="margin-2"></div>
 

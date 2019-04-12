@@ -4,214 +4,313 @@
 @candy-animation: candyDotsAnimation 1.6s infinite ease-in-out;
 @candy-size: 10px;
 
+.elementSize(@fonSize, @padding, @height) {
+  font-size: @fonSize;
+  padding: @padding;
+  height: @height;
+}
+
 .fake-button,
 w-button {
   display: inline-block;
-  border-radius: @border-radius;
-  white-space: nowrap;
+  vertical-align: middle;
 
-  &.long {
+  &.button-long {
     width: 100%;
   }
 
-  &.half {
+  &.button-half {
     width: 50%;
   }
 
-  &.long, &.half {
+  &.button-long > *,
+  &.button-half > * {
+    width: 100%;
+  }
+
+  &.button-long,
+  &.button-half {
     cursor: pointer;
   }
 
-  &.long > *, &.half > * {
+  span.fake-button-content,
+  .button-submit,
+  .button-warning,
+  .button-bordered,
+  .button-no-bordered,
+  .button-with-icon,
+  .button-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: @border-radius;
+    white-space: nowrap;
     width: 100%;
+    transition: all 0.3s;
   }
 
-  span.fake-button-content,
-  & > * {
-    border-radius: @border-radius;
-    font-size: @font-size-control;
-    padding: @padding-control-button-small;
-    width: 100%;
-
-    &.tiny {
-      font-size: @font-size-control-tiny;
-      padding: @padding-control-tiny;
-    }
-
-    &.small {
-      font-size: @font-size-control-small;
-      padding: @padding-control-button-small;
-    }
-
-    &.big {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: @height-control-big;
-      font-size: @font-size-control-big;
-      font-family: @font-roboto-medium;
-    }
-
-    @media screen and (max-width: 768px) {
-      &.big {
-        height: @height-control-big-responsive;
-        font-size: @font-size-control-big-responsive;
-      }
-    }
-
-    &:not(.transparent) {
-      background-color: @color-white;
-      border: 1px solid @color-basic-200;
-      color: @color-basic-500;
-
-      &:hover, &.hover {
-        border-color: @color-basic-500;
-        color: @color-basic-700;
-      }
-
-      &:active, &.active {
-        border-color: @color-basic-500;
-        color: @color-basic-700;
-      }
-
-      &:disabled, &.disabled {
-        border: 1px solid @color-basic-200;
-        color: @color-basic-200;
-      }
+  .button-icon,
+  .button-with-icon {
+    .button-img {
+      height: @button-icon-size;
+      width: @button-icon-size;
+      display: inline-flex;
+      opacity: .7;
     }
 
     &:hover, &.hover {
-      box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0.00);
+      .button-img {
+        opacity: 1;
+      }
+    }
+
+    &:disabled, &.disabled {
+      .button-img {
+        opacity: .4;
+      }
+    }
+  }
+
+  .button-icon,
+  .button-with-icon,
+  .button-no-bordered {
+    box-shadow: @shadow-buttons-default;
+    border: 1px solid @color-white;
+
+    &:hover, .hover {
+      box-shadow: @shadow-buttons-hover;
+    }
+
+    &:disabled, &.disabled {
+      box-shadow: @shadow-buttons-default;
+      color: @color-basic-500;
+    }
+  }
+
+  .button-micro {
+    .elementSize(@font-size-button-micro, @padding-button-micro, @height-button-micro);
+  }
+
+  .button-potty {
+    .elementSize(@font-size-button-potty, @padding-button-potty, @height-button-potty);
+  }
+
+  .button-small {
+    .elementSize(@font-size-button-small, @padding-button, @height-button-small);
+  }
+
+  .button-medium {
+    .elementSize(@font-size-button-medium, @padding-button, @height-button-medium);
+  }
+
+  .button-large {
+    .elementSize(@font-size-button-large, @padding-button, @height-button-large);
+    font-family: @font-roboto-medium;
+  }
+
+  .button-icon {
+    padding: @padding-button-icon;
+  }
+
+  @media screen and (max-width: 768px) {
+    &.big {
+      height: @height-control-big-responsive;
+      font-size: @font-size-control-big-responsive;
+    }
+  }
+
+  .button-bordered,
+  .button-no-bordered,
+  .button-icon,
+  .button-with-icon {
+    background-color: @color-white;
+    color: @color-basic-500;
+
+    &:hover, &.hover {
+      color: @color-basic-700;
     }
 
     &:active, &.active {
-      box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0.00);
+      color: @color-basic-700;
     }
 
-    &.success {
-      background-color: @color-success-300;
-      color: @color-white;
+    &:disabled, &.disabled {
+      color: @color-basic-200;
+    }
+  }
 
-      &:hover, &.hover {
-        background-color: @color-success-400;
-      }
+  .button-no-bordered {
+    background-color: @color-white;
+    border: 1px solid @color-white;
+  }
 
-      &:active, &.active {
-        background-color: @color-success-500;
-      }
+  .button-bordered {
+    background-color: @color-white;
+    border: 1px solid @color-basic-200;
+
+    &:hover, &.hover {
+      border-color: @color-basic-500;
+    }
+
+    &:active, &.active {
+      border-color: @color-basic-500;
+    }
+
+    &:disabled, &.disabled {
+      border: 1px solid @color-basic-200;
+    }
+
+  }
+
+  &:hover, &.hover {
+    box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0.00);
+  }
+
+  &:active, &.active {
+    box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0.00);
+  }
+
+  .button-micro {
+    color: @color-basic-700;
+
+    &:hover, &.hover {
+      border-color: @color-submit-300;
+    }
+
+    &:active, &.active {
+      color: @color-submit-300;
+      border-color: @color-submit-300;
+    }
+
+    &:disabled, &.disabled {
+      border-color: @color-accent-50;
+      color: @color-basic-500;
+    }
+  }
+
+  .success {
+    background-color: @color-success-300;
+    color: @color-white;
+
+    &:hover, &.hover {
+      background-color: @color-success-400;
+    }
+
+    &:active, &.active {
+      background-color: @color-success-500;
+    }
 
       &:disabled, &.disabled {
         background-color: @color-success-100;
       }
     }
 
-    &.submit {
+  .button-submit {
+    background-color: @color-submit-400;
+    border: 1px solid @color-submit-400;
+    color: @white-only;
+
+    &:hover, &.hover {
+      background-color: @color-submit-500;
+      border: 1px solid @color-submit-500;
+      color: @white-only;
+    }
+
+    &:active, &.active {
+      background-color: @color-submit-600;
+      border: 1px solid @color-submit-600;
+      color: @white-only;
+    }
+
+    &:disabled, &.disabled {
       background-color: @color-submit-400;
       border: 1px solid @color-submit-400;
       color: @white-only;
-
-      &:hover, &.hover {
-        background-color: @color-submit-500;
-        border: 1px solid @color-submit-500;
-        color: @white-only;
-      }
-
-      &:active, &.active {
-        background-color: @color-submit-600;
-        border: 1px solid @color-submit-600;
-        color: @white-only;
-      }
-
-      &:disabled, &.disabled {
-        background-color: @color-submit-400;
-        border: 1px solid @color-submit-400;
-        color: @white-only;
-        opacity: 0.3;
-      }
+      opacity: 0.3;
     }
+  }
 
-    &.warning {
-      background-color: @color-error-400;
-      border: 1px solid @color-error-400;
+  .button-warning {
+    background-color: @color-error-400;
+    border: 1px solid @color-error-400;
+    color: @white-only;
+
+    &:hover, &.hover {
+      background-color: @color-error-600;
+      border-color: transparent;
       color: @white-only;
-
-      &:hover, &.hover {
-        background-color: @color-error-600;
-        border-color: transparent;
-        color: @white-only;
-      }
-
-      &:active, &.active {
-        background-color: @color-error-600;
-        border-color: transparent;
-        color: @white-only;
-      }
-
-      &:disabled, &.disabled {
-        background-color: @color-error-200;
-        border-color: @color-error-200;
-        color: @color-white;
-        box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0);
-      }
     }
 
-    &.interface {
-      background-color: @color-white;
-      border: none;
-      color: @color-basic-500;
-      font-family: @font-roboto-medium;
-      height: 42px;
-      text-transform: capitalize;
-      box-shadow: @shadow-buttons-default;
-      transition: all 0.3s;
-      white-space: nowrap;
-
-      &:hover, &.hover {
-        box-shadow: @shadow-buttons-hover;
-        color: @color-basic-700;
-        svg {
-          fill: @color-basic-700;
-        }
-      }
-
-      svg {
-        transition: .3s;
-        vertical-align: middle;
-        fill: @color-basic-500;
-        margin-right: 7px;
-        margin-top: -3px;
-        margin-left: -4px;
-
-        @media screen and (max-width: 560px) {
-          margin-right: 0;
-          margin-left: 0;
-        }
-      }
-
-      &:active, &.active {
-        box-shadow: @shadow-buttons-hover;
-        color: @color-basic-500;
-      }
-
-      &:disabled, &.disabled {
-        opacity: 0.5;
-        cursor: default;
-        border: none;
-      }
-
-      &.bordered {
-        box-shadow: none;
-        border: 1px solid @color-basic-100;
-      }
+    &:active, &.active {
+      background-color: @color-error-600;
+      border-color: transparent;
+      color: @white-only;
     }
 
-    &.transparent {
-      background: transparent;
-      border: 1px solid @color-white;
+    &:disabled, &.disabled {
+      background-color: @color-error-200;
+      border-color: @color-error-200;
       color: @color-white;
+      box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0);
     }
+  }
+
+  .button-interface {
+    background-color: @color-white;
+    border: none;
+    color: @color-basic-500;
+    font-family: @font-roboto-medium;
+    height: 42px;
+    text-transform: capitalize;
+    box-shadow: @shadow-buttons-default;
+    transition: all 0.3s;
+    white-space: nowrap;
+
+    &:hover, &.hover {
+      box-shadow: @shadow-buttons-hover;
+      color: @color-basic-700;
+      svg {
+        fill: @color-basic-700;
+      }
+    }
+
+    svg {
+      transition: .3s;
+      vertical-align: middle;
+      fill: @color-basic-500;
+      margin-right: 7px;
+      margin-top: -3px;
+      margin-left: -4px;
+
+      @media screen and (max-width: 560px) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &:active, &.active {
+      box-shadow: @shadow-buttons-hover;
+      color: @color-basic-500;
+    }
+
+    &:disabled, &.disabled {
+      opacity: 0.5;
+      cursor: default;
+      border: none;
+    }
+
+    &.bordered {
+      box-shadow: none;
+      border: 1px solid @color-basic-100;
+    }
+  }
+
+  .transparent {
+    background: transparent;
+    border: 1px solid @color-white;
+    color: @color-white;
   }
 }
 
