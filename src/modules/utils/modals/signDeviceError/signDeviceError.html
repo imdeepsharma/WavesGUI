@@ -6,12 +6,16 @@
         <h3 class="text-center basic-700" w-i18n="modal.sign.signError"></h3>
         <p class="body-2 basic-500" w-i18n="modal.sign.signErrorText"></p>
         <div class="buttons-wrapper">
-            <w-button class="big" w-modal-close>
-                <span w-i18n="modal.sign.cancel"></span>
-            </w-button>
-            <w-button class="submit big" w-modal-hide>
-                <span w-i18n="modal.sign.retry"></span>
-            </w-button>
+            <div class="buttons-button">
+                <w-button class="button-large button-bordered" w-modal-close>
+                    <span w-i18n="modal.sign.cancel"></span>
+                </w-button>
+            </div>
+            <div class="buttons-button">
+                <w-button class="button-large button-submit" w-modal-hide>
+                    <span class="button-text" class="button-text" w-i18n="modal.sign.retry"></span>
+                </w-button>
+            </div>
         </div>
     </div>
 
@@ -28,8 +32,8 @@
                    w-i18n="modal.sign.article" target="_blank"></a>
             </div>
         </div>
-        <w-button class="submit big" w-modal-close>
-            <span w-i18n="modal.sign.close"></span>
+        <w-button class="button-large button-submit" w-modal-close>
+            <span class="button-text" w-i18n="modal.sign.close"></span>
         </w-button>
     </div>
 
@@ -38,12 +42,16 @@
         <h3 class="text-center basic-700" w-i18n="modal.sign.signErrorKeeper"></h3>
         <p class="body-2 basic-500" w-i18n="modal.sign.signErrorTextKeeper"></p>
         <div class="buttons-wrapper">
-            <w-button class="big" w-modal-close>
-                <span w-i18n="modal.sign.cancel"></span>
-            </w-button>
-            <w-button class="submit big" w-modal-hide>
-                <span w-i18n="modal.sign.retry"></span>
-            </w-button>
+            <div class="buttons-button">
+                <w-button class="button-large button-bordered" w-modal-close>
+                    <span class="button-text" w-i18n="modal.sign.cancel"></span>
+                </w-button>
+            </div>
+            <div class="buttons-button">
+                <w-button class="button-large button-submit" w-modal-hide>
+                    <span class="button-text" w-i18n="modal.sign.retry"></span>
+                </w-button>
+            </div>
         </div>
     </div>
 
@@ -53,10 +61,10 @@
         <h3 class="text-center basic-700" w-i18n="modal.sign.connectionErrorKeeper"></h3>
         <div class="title-wrapper margin-4 body-2 basic-500">
             <div class="text-center basic-500">
-                <span w-i18n="modal.sign.signErrorTextImportKeeper" params="{address: $ctrl.userAddress}"></span>
+                <span class="button-text" w-i18n="modal.sign.signErrorTextImportKeeper" params="{address: $ctrl.userAddress}"></span>
             </div>
         </div>
-        <w-button class="submit big" w-modal-close>
+        <w-button class="button-large button-submit" w-modal-close>
             <span w-i18n="modal.sign.close"></span>
         </w-button>
     </div>

@@ -13,12 +13,16 @@
             <div class="margin-3 body-2 basic-500 dex-scripted-pair__text"  w-i18n="modal.dexScriptedPair.body"></div>
 
             <div class="buttons-wrapper margin-3">
-                <w-button w-modal-close class="big long">
-                    <span w-i18n="modal.confirmOrder.cancel">Cancel</span>
-                </w-button>
-                <w-button on-click="$ctrl.confirm()" class="big long submit">
-                    <span w-i18n="modal.confirmOrder.continue">Continue</span>
-                </w-button>
+                <div class="buttons-button">
+                    <w-button w-modal-close class="button-large button-long button-bordered">
+                        <span class="button-text" w-i18n="modal.confirmOrder.cancel">Cancel</span>
+                    </w-button>
+                </div>
+                <div class="buttons-button">
+                    <w-button on-click="$ctrl.confirm()" class="button-large button-long button-submit">
+                        <span class="button-text" w-i18n="modal.confirmOrder.continue">Continue</span>
+                    </w-button>
+                </div>
             </div>
 
             <div class="body-2 basic-500 flex">

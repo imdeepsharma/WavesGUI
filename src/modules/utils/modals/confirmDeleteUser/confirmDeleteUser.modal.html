@@ -18,14 +18,18 @@
             <div  ng-if="$ctrl.isKeeper" class="margin-3 basic-500 body-2" w-i18n="modal.removeKeeperAccount.text"></div>
 
             <div class="buttons-wrapper">
-                <w-button w-modal-close
-                        class="big long">
-                    <span w-i18n="modal.removeAccount.cancel"></span>
-                </w-button>
-                <w-button w-modal-hide
-                        class="big long submit">
-                    <span w-i18n="modal.removeAccount.remove"></span>
-                </w-button>
+                <div class="buttons-button">
+                    <w-button w-modal-close
+                            class="button-large button-long button-bordered">
+                        <span class="button-text" w-i18n="modal.removeAccount.cancel"></span>
+                    </w-button>
+                </div>
+                <div class="buttons-button">
+                    <w-button w-modal-hide
+                            class="button-large button-long button-submit">
+                        <span class="button-text" w-i18n="modal.removeAccount.remove"></span>
+                    </w-button>
+                </div>
             </div>
 
         </div>

@@ -72,7 +72,7 @@
     <w-sign-button on-click="$ctrl.onClickSign()"
                    disabled="setAssetScriptForm.$invalid || $ctrl.isPendingScrip || !$ctrl.hasFee"
                    on-success="$ctrl.onSuccess({signable: signable})"
-                   class="submit big long margin-top-3">
-        <span w-i18n="directives.setAssetScriptForm.ok"></span>
+                   class="button-large button-long button-submit margin-top-3">
+        <span class="button-text" w-i18n="directives.setAssetScriptForm.ok"></span>
     </w-sign-button>
 </form>

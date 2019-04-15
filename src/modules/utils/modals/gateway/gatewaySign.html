@@ -48,14 +48,14 @@
         </div>
 
         <div class="buttons-wrapper margin-top-3" ng-if="$ctrl.isSeed || !$ctrl.signPending">
-            <w-button class="big" w-modal-close>
-                <span w-i18n="modal.gatewaySign.cancel"></span>
+            <w-button class="button-large button-bordered" w-modal-close>
+                <span class="button-text" w-i18n="modal.gatewaySign.cancel"></span>
             </w-button>
-            <w-button ng-if="!$ctrl.signAdapterError" class="big submit" w-modal-close on-click="$ctrl.send()">
-                <span w-i18n="modal.gatewaySign.continue"></span>
+            <w-button ng-if="!$ctrl.signAdapterError" class="button-large button-submit" w-modal-close on-click="$ctrl.send()">
+                <span class="button-text" w-i18n="modal.gatewaySign.continue"></span>
             </w-button>
-            <w-button ng-if="$ctrl.signAdapterError" class="big submit" w-modal-close on-click="$ctrl.sign()">
-                <span w-i18n="modal.gatewaySign.retrySign"></span>
+            <w-button ng-if="$ctrl.signAdapterError" class="button-large button-submit" w-modal-close on-click="$ctrl.sign()">
+                <span class="button-text" w-i18n="modal.gatewaySign.retrySign"></span>
             </w-button>
         </div>
     </div>
@@ -70,8 +70,8 @@
             <pre class="body-2">{{::$ctrl.errorMessage}}</pre>
         </div>
 
-        <w-button class="big long white" w-modal-close>
-            <span w-i18n="modal.gatewaySign.error.button"></span>
+        <w-button class="button-large button-long button-no-bordered" w-modal-close>
+            <span class="button-text" w-i18n="modal.gatewaySign.error.button"></span>
         </w-button>
     </div>
 </div>

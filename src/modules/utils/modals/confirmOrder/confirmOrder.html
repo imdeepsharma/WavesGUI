@@ -15,14 +15,18 @@
         <div class="body-2 basic-500" w-i18n="modal.confirmOrder.description"></div>
 
         <div class="buttons-wrapper margin-top-3">
-            <w-button on-click="$ctrl.close()"
-                      class="big long">
-                <span w-i18n="modal.confirmOrder.cancel"></span>
-            </w-button>
-            <w-button on-click="$ctrl.agree()"
-                      class="big long submit">
-                <span w-i18n="modal.confirmOrder.continue"></span>
-            </w-button>
+            <div class="buttons-button">
+                <w-button on-click="$ctrl.close()"
+                          class="button-large button-long button-no-bordered">
+                    <span class="button-text" w-i18n="modal.confirmOrder.cancel"></span>
+                </w-button>
+            </div>
+            <div class="buttons-button">
+                <w-button on-click="$ctrl.agree()"
+                          class="button-large button-long button-submit">
+                    <span class="button-text" w-i18n="modal.confirmOrder.continue"></span>
+                </w-button>
+            </div>
         </div>
     </div>
 

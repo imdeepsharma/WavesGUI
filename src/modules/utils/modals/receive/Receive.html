@@ -96,8 +96,8 @@
                                 <w-button ng-if="$ctrl.gatewayServerError"
                                           on-click="$ctrl.updateGatewayAddress()"
                                           type="submit"
-                                          class="big submit long">
-                                    <span w-i18n="modal.receive.coinomat.tryAgain"></span>
+                                          class="button-large button-long button-submit">
+                                    <span class="button-text" w-i18n="modal.receive.coinomat.tryAgain"></span>
                                 </w-button>
                             </div>
                         </w-tab>
@@ -280,9 +280,9 @@
                                 </form>
 
                                 <a href="{{$ctrl.indacoinLink}}" target="_blank">
-                                    <w-button disabled="card.$invalid" class="big submit long"
+                                    <w-button disabled="card.$invalid" class="button-large button-long button-submit"
                                               on-click="$ctrl.confirmIndacoin()">
-                                        <span w-i18n="modal.receive.card.continue"></span>
+                                        <span class="button-text" w-i18n="modal.receive.card.continue"></span>
                                     </w-button>
                                 </a>
                             </div>

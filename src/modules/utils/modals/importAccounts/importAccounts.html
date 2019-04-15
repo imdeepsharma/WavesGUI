@@ -20,12 +20,16 @@
         </ul>
 
         <div class="buttons-wrapper">
-            <w-button w-modal-close class="big">
-                <span w-i18n="modal.import.importCancel"></span>
-            </w-button>
-            <w-button disabled="!$ctrl.hasSelected" on-click="$ctrl.importAccounts()" class="big submit">
-                <span w-i18n="modal.import.importButton"></span>
-            </w-button>
+            <div class="buttons-button">
+                <w-button w-modal-close class="button-large button-bordered">
+                    <span class="button-text" w-i18n="modal.import.importCancel"></span>
+                </w-button>
+            </div>
+            <div class="buttons-button">
+                <w-button disabled="!$ctrl.hasSelected" on-click="$ctrl.importAccounts()" class="button-large button-submit">
+                    <span class="button-text" w-i18n="modal.import.importButton"></span>
+                </w-button>
+            </div>
         </div>
     </div>
 
@@ -47,8 +51,8 @@
             <div class="basic-500 body-2 text-center margin-4"
                  w-i18n="modal.import.errorUnable"></div>
 
-            <w-button w-modal-close class="big long submit">
-                <span w-i18n="modal.import.iUnderstandButton"></span>
+            <w-button w-modal-close class="button-large button-long button-submit">
+                <span class="button-text" w-i18n="modal.import.iUnderstandButton"></span>
             </w-button>
 
         </div>
@@ -76,8 +80,8 @@
                     <div class="body-2 basic-700" w-i18n="modal.import.wavesBetaClient"></div>
                     <div class="caption-1 basic-500 margin-2" w-i18n="modal.import.wavesBetaClientDescription"></div>
                     <w-button on-click="$ctrl.importFromBeta()"
-                              class="submit tiny">
-                        <span w-i18n="modal.import.selectButton"></span>
+                              class="button-submit button-potty">
+                        <span class="button-text" w-i18n="modal.import.selectButton"></span>
                     </w-button>
                 </div>
                 <div ng-if="!$ctrl.wasImportOld" class="import-modal__block import-modal__block-old">
@@ -85,8 +89,8 @@
                     <div class="body-2 basic-700" w-i18n="modal.import.wavesLiteClient"></div>
                     <div class="caption-1 basic-500 margin-2" w-i18n="modal.import.wavesLiteClientDescription"></div>
                     <w-button on-click="$ctrl.importFromOld()"
-                              class="submit tiny">
-                        <span w-i18n="modal.import.selectButton"></span>
+                              class="button-submit button-potty">
+                        <span class="button-text" w-i18n="modal.import.selectButton"></span>
                     </w-button>
                 </div>
 

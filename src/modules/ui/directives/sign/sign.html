@@ -14,14 +14,18 @@
 
 <div ng-if="!$ctrl.signPending && $ctrl.signError"
      class="buttons-wrapper">
-    <w-button class="big" on-click="$ctrl.cancel()">
-        <span ng-if="::$ctrl.isLedger" w-i18n="directives.sign.confirmRequestLedger.cancel"></span>
-        <span ng-if="::$ctrl.isKeeper" w-i18n="directives.sign.confirmRequestKeeper.cancel"></span>
-    </w-button>
-    <w-button class="big submit" on-click="$ctrl.trySign()">
-        <span ng-if="::$ctrl.isLedger" w-i18n="directives.sign.confirmRequestLedger.sign"></span>
-        <span ng-if="::$ctrl.isKeeper" w-i18n="directives.sign.confirmRequestKeeper.sign"></span>
-    </w-button>
+        <div class="buttons-button">
+            <w-button class="button-large button-bordered" on-click="$ctrl.cancel()">
+                <span class="button-text" ng-if="::$ctrl.isLedger" w-i18n="directives.sign.confirmRequestLedger.cancel"></span>
+                <span class="button-text" ng-if="::$ctrl.isKeeper" w-i18n="directives.sign.confirmRequestKeeper.cancel"></span>
+            </w-button>
+        </div>
+        <div class="buttons-button">
+            <w-button class="button-large button-submit" on-click="$ctrl.trySign()">
+                <span class="button-text" ng-if="::$ctrl.isLedger" w-i18n="directives.sign.confirmRequestLedger.sign"></span>
+                <span class="button-text" ng-if="::$ctrl.isKeeper" w-i18n="directives.sign.confirmRequestKeeper.sign"></span>
+            </w-button>
+        </div>
 </div>
 
 <div ng-if="$ctrl.signPending" class="relative sign-loader">

@@ -107,8 +107,8 @@
         </div>
         <w-button on-click="$ctrl.getGatewayDetails()"
                   type="submit"
-                  class="big submit long">
-            <span w-i18n="modal.receive.coinomat.tryAgain"></span>
+                  class="button-large button-long button-submit">
+            <span class="button-text" w-i18n="modal.receive.coinomat.tryAgain"></span>
         </w-button>
     </div>
 
@@ -292,8 +292,8 @@
         <a href="{{$ctrl.digiLiraUserLink}}"
            target="_blank"
            ng-if="$ctrl.toBankMode && $ctrl.isLira"
-           class="fake-button long margin-4">
-            <span class="fake-button-content big submit long" w-i18n="button.continue"></span>
+           class="fake-button button-long margin-4">
+            <span class="fake-button-content button-large button-long button-submit" w-i18n="button.continue"></span>
         </a>
 
         <w-sign-button

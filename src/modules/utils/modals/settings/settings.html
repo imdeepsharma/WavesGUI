@@ -129,8 +129,8 @@
                         <a class="settings-copy" w-copy="::$ctrl.phrase" w-i18n="modal.settings.network.copy"></a>
                     </div>
                     <div class="data-field">
-                        <w-button ng-if="!$ctrl.shownSeed" class="tiny" on-click="$ctrl.shownSeed = true">
-                            <span w-i18n="modal.settings.security.show"></span>
+                        <w-button ng-if="!$ctrl.shownSeed" class="button-potty button-bordered" on-click="$ctrl.shownSeed = true">
+                            <span class="button-text" w-i18n="modal.settings.security.show"></span>
                         </w-button>
                         <pre class="footnote-1" ng-if="$ctrl.shownSeed">{{::$ctrl.phrase}}</pre>
                     </div>
@@ -144,8 +144,8 @@
                            w-i18n="modal.settings.network.copy"></a>
                     </div>
                     <div class="data-field">
-                        <w-button ng-if="!$ctrl.shownKey" class="tiny" on-click="$ctrl.shownKey = true">
-                            <span w-i18n="modal.settings.security.show"></span>
+                        <w-button ng-if="!$ctrl.shownKey" class="button-potty button-bordered" on-click="$ctrl.shownKey = true">
+                            <span class="button-text" w-i18n="modal.settings.security.show"></span>
                         </w-button>
                         <div class="mobile-low-fsize" ng-if="$ctrl.shownKey">{{::$ctrl.privateKey}}</div>
                     </div>
@@ -163,9 +163,9 @@
                 <div ng-if="$ctrl.advancedMode" class="row flex-row row-style solid-border text-right">
                     <div class="footnote basic-500" w-i18n="modal.settings.security.script"></div>
                     <div>
-                        <w-button on-click="$ctrl.showScriptModal()" class="tiny submit" w-modal-close>
-                            <span ng-if="$ctrl.isScript" w-i18n="modal.settings.security.scriptButtonUpdate"></span>
-                            <span ng-if="!$ctrl.isScript" w-i18n="modal.settings.security.scriptButton"></span>
+                        <w-button on-click="$ctrl.showScriptModal()" class="button-potty button-submit" w-modal-close>
+                            <span class="button-text" ng-if="$ctrl.isScript" w-i18n="modal.settings.security.scriptButtonUpdate"></span>
+                            <span class="button-text" ng-if="!$ctrl.isScript" w-i18n="modal.settings.security.scriptButton"></span>
                         </w-button>
                     </div>
                 </div>
@@ -274,8 +274,8 @@
                 </div>
 
                 <div class="margin-4">
-                    <w-button class="interface bordered" on-click="$ctrl.setNetworkDefault()">
-                        <span w-i18n="modal.settings.setDefault"></span>
+                    <w-button class="button-medium button-bordered" on-click="$ctrl.setNetworkDefault()">
+                        <span class="button-text" w-i18n="modal.settings.setDefault"></span>
                     </w-button>
                 </div>
             </w-step>

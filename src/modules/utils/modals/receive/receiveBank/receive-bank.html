@@ -85,8 +85,8 @@
                        href="{{$ctrl.idNowUserLink}}"
                        target="_blank"
                        class="flex">
-                        <w-button class="big submit long" disabled="!$ctrl.termsAccepted">
-                            <span w-i18n="modal.sepa.proceed"></span>
+                        <w-button class="button-large button-long button-submit" disabled="!$ctrl.termsAccepted">
+                            <span class="button-text" w-i18n="modal.sepa.proceed"></span>
                         </w-button>
                     </a>
                 </div>
@@ -106,8 +106,8 @@
                 <a href="{{$ctrl.digiLiraUserLink}}"
                    ng-click="$ctrl.nextStep()"
                    target="_blank"
-                   class="fake-button long">
-                        <span class="fake-button-content big submit long"
+                   class="fake-button button-long">
+                        <span class="fake-button-content button-large button-long button-submit"
                               w-i18n="modal.receive.card.continue"></span>
                 </a>
             </div>

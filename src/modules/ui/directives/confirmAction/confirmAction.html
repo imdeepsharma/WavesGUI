@@ -5,12 +5,16 @@
             <div class="title basic-900 margin-1" w-i18n="{{$ctrl.literalHeader}}"></div>
             <div class="descr basic-500 margin-1" w-i18n="{{$ctrl.literalDescription}}"></div>
             <div class="buttons-wrapper">
-                <w-button class="submit tiny" on-click="$ctrl.removeClicked()">
-                    <span w-i18n="{{$ctrl.literalBack}}"></span>
-                </w-button>
-                <w-button class="warning tiny" on-click="$ctrl.runAction()">
-                    <span w-i18n="{{$ctrl.literalConfirm}}"></span>
-                </w-button>
+                <div class="buttons-button">
+                    <w-button class="button-submit button-potty" on-click="$ctrl.removeClicked()">
+                        <span class="button-text" w-i18n="{{$ctrl.literalBack}}"></span>
+                    </w-button>
+                </div>
+                <div class="buttons-button">
+                    <w-button class="button-warning button-potty" on-click="$ctrl.runAction()">
+                        <span class="button-text" w-i18n="{{$ctrl.literalConfirm}}"></span>
+                    </w-button>
+                </div>
             </div>
         </div>
     </w-click-outside>

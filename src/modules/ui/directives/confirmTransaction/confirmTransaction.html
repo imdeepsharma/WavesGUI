@@ -99,16 +99,20 @@
                         </div>
 
                         <div class="buttons-wrapper margin-top-3" ng-if="!$ctrl.loadingSignFromDevice">
-                            <w-button ng-if="!$ctrl.noBackButton" class="big" on-click="$ctrl.back()">
-                                <span w-i18n="confirmTransaction.back"></span>
-                            </w-button>
-                            <w-button class="big submit"
-                                      disabled="$ctrl.errors.length > 0 || !$ctrl.txId"
-                                      ng-class="{long: $ctrl.noBackButton}"
-                                      w-next-step
-                                      on-click="$ctrl.confirm()">
-                                <span w-i18n="confirmTransaction.confirm"></span>
-                            </w-button>
+                            <div class="buttons-button">
+                                <w-button ng-if="!$ctrl.noBackButton" class="button-large button-bordered" on-click="$ctrl.back()">
+                                    <span class="button-text" w-i18n="confirmTransaction.back"></span>
+                                </w-button>
+                            </div>
+                            <div class="buttons-button">
+                                <w-button class="button-large button-submit"
+                                          disabled="$ctrl.errors.length > 0 || !$ctrl.txId"
+                                          ng-class="{long: $ctrl.noBackButton}"
+                                          w-next-step
+                                          on-click="$ctrl.confirm()">
+                                    <span class="button-text" w-i18n="confirmTransaction.confirm"></span>
+                                </w-button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,8 +151,8 @@
                     <div class="basic-500 margin-4 body-2 text-center"
                          w-i18n="confirmTransaction.description.{{::$ctrl.tx.typeName}}" params="$ctrl.tx"></div>
                     <div>
-                        <w-button class="submit half big" on-click="$ctrl.showTxInfo()">
-                            <span w-i18n="confirmTransaction.details"></span>
+                        <w-button class="button-large button-submit button-half" on-click="$ctrl.showTxInfo()">
+                            <span class="button-text" w-i18n="confirmTransaction.details"></span>
                         </w-button>
                     </div>
                 </div>

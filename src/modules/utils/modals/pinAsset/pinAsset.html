@@ -23,14 +23,18 @@
         </div>
         <div>
             <div class="buttons-wrapper">
-                <w-button class="big long" w-modal-close>
-                    <span w-i18n="modal.pinAsset.cancel"></span>
-                </w-button>
-                <w-button class="big long submit"
-                          on-click="$ctrl.onSubmit()"
-                          disabled="!$ctrl.selected">
-                    <span w-i18n="modal.pinAsset.submit"></span>
-                </w-button>
+                <div class="buttons-button">
+                    <w-button class="button-large button-long button-bordered" w-modal-close>
+                        <span class="button-text" w-i18n="modal.pinAsset.cancel"></span>
+                    </w-button>
+                </div>
+                <div class="buttons-button">
+                    <w-button class="button-large button-long button-submit"
+                              on-click="$ctrl.onSubmit()"
+                              disabled="!$ctrl.selected">
+                        <span class="button-text" w-i18n="modal.pinAsset.submit"></span>
+                    </w-button>
+                </div>
             </div>
         </div>
     </md-dialog-content>

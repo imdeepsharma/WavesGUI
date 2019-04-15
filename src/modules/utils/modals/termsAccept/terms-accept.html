@@ -24,9 +24,9 @@
                     <label for="privacyPolicy" w-i18n="modal.termsAccept.body.privacyPolicy"></label>
                 </div>
 
-                <w-button class="submit long big" on-click="$ctrl.confirm()"
+                <w-button class="button-large button-long button-submit" on-click="$ctrl.confirm()"
                           disabled="!$ctrl.securityAndBackup || !$ctrl.readTermsAndConditions || !$ctrl.privacyPolicy">
-                    <span w-i18n="modal.termsAccept.body.ok"></span>
+                    <span class="button-text" w-i18n="modal.termsAccept.body.ok"></span>
                 </w-button>
             </md-dialog-content>
         </w-step>

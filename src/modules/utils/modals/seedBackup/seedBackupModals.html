@@ -15,8 +15,8 @@
                 <span w-i18n="backupSeed.needConfirm"></span>
             </div>
 
-            <w-button class="submit big long" w-step-next>
-                <span w-i18n="backupSeed.ok"></span>
+            <w-button class="button-large button-long button-submit" w-step-next>
+                <span class="button-text" w-i18n="backupSeed.ok"></span>
             </w-button>
         </div>
 
@@ -49,12 +49,16 @@
             </w-delegate>
 
             <div class="buttons-wrapper">
-                <w-button class="big long" w-step-prev>
-                    <span w-i18n="modal.prev"></span>
-                </w-button>
-                <w-button disabled="!$ctrl.seedIsValid" class="big long submit" w-step-next>
-                    <span w-i18n="modal.next"></span>
-                </w-button>
+                <div class="buttons-button">
+                    <w-button class="button-large button-long button-bordered" w-step-prev>
+                        <span class="button-text" w-i18n="modal.prev"></span>
+                    </w-button>
+                </div>
+                <div class="buttons-button">
+                    <w-button disabled="!$ctrl.seedIsValid" class="button-large button-long button-submit" w-step-next>
+                        <span class="button-text" w-i18n="modal.next"></span>
+                    </w-button>
+                </div>
             </div>
 
         </div>
@@ -67,8 +71,8 @@
             <h2 class="basic-700" w-i18n="modal.successHeadline"></h2>
             <div class="basic-500 margin-4 body-2 text-center"
                  w-i18n="modal.successContent"></div>
-            <w-button class="submit half big" w-modal-hide>
-                <span w-i18n="modal.understand"></span>
+            <w-button class="button-large button-submit button-half" w-modal-hide>
+                <span class="button-text" w-i18n="modal.understand"></span>
             </w-button>
         </div>
 

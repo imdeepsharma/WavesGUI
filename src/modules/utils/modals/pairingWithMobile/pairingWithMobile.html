@@ -5,8 +5,9 @@
         <w-qr-code size="200" w-toggle-class="zoomed-in" url="$ctrl.exportUrl"></w-qr-code>
 
         <div class="hide-qr-block flex relative">
-            <w-button class="interface" w-toggle-class="show-qr">
-                <span w-i18n="modal.pairing.showQr"></span>
+
+            <w-button class="button-medium button-no-bordered" w-toggle-class="show-qr">
+                <span class="button-text" w-i18n="modal.pairing.showQr"></span>
             </w-button>
         </div>
 
@@ -39,7 +40,7 @@
     <div class="basic-500 margin-2 body-2"
          w-i18n="modal.settings.pairing.unavailable.description.{{$ctrl.userType}}"></div>
 
-    <w-button class="submit big" w-modal-close>
-        <span w-i18n="modal.settings.pairing.unavailable.ok"></span>
+    <w-button class="button-large button-submit" w-modal-close>
+        <span class="button-text" w-i18n="modal.settings.pairing.unavailable.ok"></span>
     </w-button>
 </div>
